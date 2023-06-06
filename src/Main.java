@@ -46,7 +46,7 @@ public class Main {
             criptografar.init(Cipher.ENCRYPT_MODE, chave);
 
             // Mensagem a ser criptografada
-            String mensagem = "Yuri é camisa 10";
+            String mensagem = "Mensagem Secreta";
 
             // Criptografa a mensagem
             textoCifrado = criptografar.doFinal(mensagem.getBytes());
