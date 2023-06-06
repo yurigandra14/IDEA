@@ -21,6 +21,7 @@ public class Main {
 
     public static void main(String[] args) {
 
+        // Adiciona o provedor de segurança Bouncy Castle FIPS (Federal Information Processing Standards) como um provedor de segurança no ambiente Java.
         Security.addProvider(new BouncyCastleFipsProvider());
 
         // Chama o método para criptografar a mensagem
