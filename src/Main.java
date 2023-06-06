@@ -8,6 +8,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.Key;
 import java.security.SecureRandom;
 import java.security.Security;
+import java.util.Scanner;
 
 
 public class Main {
@@ -45,8 +46,9 @@ public class Main {
             // Inicializa o Cipher no modo de criptografia com a chave
             criptografar.init(Cipher.ENCRYPT_MODE, chave);
 
-            // Mensagem a ser criptografada
-            String mensagem = "Mensagem Secreta";
+            // Lê a mensagem a ser criptografada
+            Scanner ler = new Scanner(System.in);
+            String mensagem = ler.nextLine();
 
             // Criptografa a mensagem
             textoCifrado = criptografar.doFinal(mensagem.getBytes());
